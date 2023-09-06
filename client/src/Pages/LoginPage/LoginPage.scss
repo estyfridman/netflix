@@ -1,0 +1,144 @@
+@import '../../App.scss';
+
+.login {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.8)),
+    url('https://mebincdn.themebin.com/1664271579476.jpg');
+  background-size: cover;
+  position: relative;
+
+  // .top {
+  //   .wrapper {
+  //     padding: 20px 50px;
+  //     display: flex;
+  //     align-items: center;
+  //     justify-content: space-between;
+
+  //     .logo {
+  //       height: 40px;
+  //     }
+  //   }
+  // }
+
+  .container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+    form {
+      width: 30%;
+      min-width: 200px;
+      height: 60%;
+      min-height: 300px;
+      padding: 2%;
+      border-radius: 4%;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+
+      @include mobile {
+        width: 100%;
+        height: 100%;
+      }
+  
+      .field {
+        margin: 0 10% 5% 10% 10%;
+        width: 100%;
+
+        input {
+          height: 90%;
+          width: 95.5%;
+          border-radius: 5px;
+          background-color: rgb(79, 78, 78);
+          color: white;
+          padding-left: 10px;
+          border: none;
+          cursor: text;
+          transition: all 0.3s ease;
+        }
+
+        label {
+          position: relative;
+          top: -70%;
+          left: 10%;
+          font-weight: 400;
+          font-size: 15px;
+          pointer-events: none;
+          transform: translateY(-50%);
+          transition: all 0.3s ease;
+        }
+
+        input:focus ~ label, input:valid ~ label{
+          top: -120%;
+          font-size: 0.6rem;
+          border-bottom: 2% solid #ff8a24;
+          transform: translateY(-50%);
+        }
+
+        span {
+          position: relative;
+          top: -70%;
+          left: 60%;
+          cursor: pointer;
+        }
+      }
+
+      .loginButton {
+        //height: 60%;
+        width: 100%;
+        border-radius: 5px;
+        background-color: red;
+        color: white;
+        border: none;
+        font-size: 18px;
+        font-weight: 550;
+        cursor: pointer;
+        padding: 5%;
+      }
+
+      .signup-span {
+        color: lightgray;
+        padding: 5%;
+
+        .link-signin {
+          text-decoration: underline;
+        }
+
+        &:hover {
+          color: red;
+        }
+      }
+
+      .more {
+        //display: flex;
+        //align-items: center;
+
+        small {
+          display: inline-block;
+        }
+
+        a {
+          background-color: inherit;
+          font-size: 0.9rem;
+          text-decoration: underline;
+          color: blue;
+          display: inline-block;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

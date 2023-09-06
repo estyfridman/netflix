@@ -1,0 +1,69 @@
+@import '../../App.scss';
+
+.featured {
+  height: 100vh;
+  position: relative;
+  color: #fbfbfb;
+  display: flex;
+ 
+  background: linear-gradient(to right,
+  rgba(0, 0, 0, 1),
+  rgba(0, 0, 0, 0));
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+
+  }
+  .info {
+    width: 70%;
+    height: 50%;
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    padding: 2%;
+   
+    img {
+      @include mobile {
+        width: 100%;
+      }
+      width: 20%;
+      //max-height: 30vh;
+      object-fit: scale-down;
+      display: flex;
+      flex-direction: column;
+    }
+    .desc {
+      @include mobile {
+        display: -webkit-box;
+        -webkit-line-clamp: 7;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+    }
+    .buttons {
+      display: flex;
+      button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        font-weight: 800;
+        margin: 20px;
+        cursor: pointer;
+        background: #FF4742;
+        color: white;
+       
+        &:hover{
+          opacity: .8;
+          font-size: 1.4rem;
+        }
+
+      }
+    }
+  }
+}

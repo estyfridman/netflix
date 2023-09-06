@@ -1,0 +1,27 @@
+.list {
+    width: 100%;
+    margin-top: 10px;
+  
+    .listTitle {
+      font-size: 30px;
+      font-weight: 500;
+      margin-left: 50px;
+      color: white;
+    }
+    .carousel {
+      margin-top: 25px;
+      overflow: visible;
+      .carousel-item {
+        display: flex;
+        justify-content: center; 
+        align-items: center; 
+        flex: 0 0 auto;
+        width: 100%; 
+        transform: translateX(calc(50% - 50px));
+      }
+  
+      .item:hover {
+        z-index: 1;
+      }
+    }
+  }

@@ -1,0 +1,51 @@
+.finish-register-page {
+    margin-top: 12%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    grid-row-end: span;
+    grid-gap: 5px;
+
+    .step {
+        padding: 3%;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+
+        .mailingList {   
+            display: flex;
+        }
+    }
+
+    input[type=text], input[type=password], input[type=email] {
+        width: 100%;
+        border-bottom: 4px solid #FF4742;
+        border-top: none;
+        border-left: 4px solid #FF4742;
+        border-right: none;
+    }
+
+    lable {
+        margin-bottom: 5%;
+    }
+    button {
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        font-weight: 800;
+        margin: 20px;
+        cursor: pointer;
+        background: #FF4742;
+        color: white;
+
+        &:hover {
+            opacity: .8;
+            font-size: 1.4rem;
+        }
+
+    }
+}

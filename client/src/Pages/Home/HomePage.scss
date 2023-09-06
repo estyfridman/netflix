@@ -1,0 +1,16 @@
+@import '../../App.scss';
+
+
+.home {
+    background-color: var(--main-color);
+    overflow: hidden;
+
+    .lists-class{
+      margin-top: 10%;
+
+    @include tablet {
+      align-items: center;
+      margin-top: 15%;
+    }
+    }
+  }

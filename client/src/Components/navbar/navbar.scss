@@ -1,0 +1,126 @@
+@import '../../App.scss';
+
+.navbar {
+  width: 100%;
+  color: white;
+  font-size: 14px;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  padding: 2%;
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 1),
+      rgba(0, 0, 0, 0));
+
+      &.scrolled {
+        background-color: var(--main-color);
+        height: 1.2rem;
+      }
+
+  .navcontainer {
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    height: 70px;
+    letter-spacing: 0.4rem;
+
+    @include tablet {
+      letter-spacing: normal;
+      padding: 0px 20px;
+      height: 70vh;
+    }
+
+    @include mobile {
+      height: 1.2rem;
+    }
+
+    .user {
+      display: inline-block;
+
+      img {
+        border-radius: 50%;
+      }
+    }
+
+    img {
+      height: 25px;
+      margin-right: 10px;
+
+      @include mobile {
+        display: none;
+      }
+    }
+
+    .links {
+      float: right;
+      margin-right: 40px;
+      overflow: hidden;
+
+      @include tablet {
+        display: none;
+      }
+
+      .link {
+        display: inline-block;
+        margin: 0 10px;
+        cursor: pointer;
+
+        .icon {
+          margin-right: 10px;
+        }
+
+        span {
+          color: #c0c0c0;
+
+          @include small-desktop {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .Drop {
+      display: none;
+      margin-right: 3%;
+
+      @include tablet {
+        display: block;
+        cursor: pointer;
+      }
+    }
+
+    .mobile{
+      position: relative;
+      width: 100%;
+      text-align: center;
+
+      @include tablet {
+        background: rgba(0, 0, 0, 0.7);
+        position: relative;
+      }
+
+      div.link, a.link {
+        @include tablet {
+          width: 100%;
+          float: none;
+          display: block;
+          padding: 1%;
+          text-align: center;
+          background: #5f5f5f;
+          border-radius: 5px;
+          position: relative;
+          border: 2px solid #ff9233;
+
+          span {
+            margin-left: 10px;
+          }
+
+          .user.link{
+            display: none;
+          }
+        }
+      }
+    }
+
+  }
+}

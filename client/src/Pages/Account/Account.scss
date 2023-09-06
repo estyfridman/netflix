@@ -1,0 +1,31 @@
+@import '../../App.scss';
+
+.user-profile {  
+    width: 100vw;
+    min-height: 100vh;
+    overflow: auto;
+    background-color: var(--main-color);
+    color: #ffffff;display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+
+    .profile-picture {
+        width: 200px; 
+        height: 200px; 
+
+        img {
+            border-radius: 50%; 
+        }
+    }
+
+    .upload{
+        display: grid;
+        grid-template-columns: 1fr;
+
+        input {
+            margin: 5%;
+            //display: none;
+        }
+    }
+}
